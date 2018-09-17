@@ -17,16 +17,17 @@
     <input id="W" type="number" name="W">
     <br>
     <p  id = "BMI">BMI值為 : 0</p>
-    <input type="button" value="計算"  onclick="test()">
+    <input type="button" value="計算"  onclick="get_bmi()">
     <br>
     <script>
-
-        function test()
+        function get_bmi()
         {
             var h =document.getElementById("H").value;
             var h2 = h/100;
+
             var w = document.getElementById("W").value;
             var bmi = Math.round(w/(h2*h2)*100)/100;
+
             if(bmi < 25)
                 document.getElementById("BMI").innerHTML = "BMI值為 : "+bmi+"<br>體重過輕";
             else if(bmi >30)
